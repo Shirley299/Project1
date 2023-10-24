@@ -21,7 +21,7 @@
   <Router {url}>
     <nav class="navigation">
       <ul>
-        {#each ['/project1/', '/project1/catalog', '/project1/user', '/project1/about'] as path, index}
+        {#each ['/Project1/', '/Project1/catalog', '/Project1/user', '/Project1/about'] as path, index}
           <li class={classList[index]}>
             <Link class="link" to={path} on:click={() => click(index)}>
               <span class="text">
@@ -43,10 +43,10 @@
       </ul>
     </nav>
     <div>
-      <Route path="/project1/"><Home /></Route>
-      <Route path="/project1/catalog"><Catalog /></Route>
-      <Route path="/project1/user"><User /></Route>
-      <Route path="/project1/about"><About /></Route>
+      <Route path="/Project1/"><Home /></Route>
+      <Route path="/Project1/catalog"><Catalog /></Route>
+      <Route path="/Project1/user"><User /></Route>
+      <Route path="/Project1/about"><About /></Route>
     </div>
   </Router>
 </main>
