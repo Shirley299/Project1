@@ -21,10 +21,15 @@
   <Router {url}>
     <nav class="navigation">
       <ul>
-        {#each ['/', '/catalog', '/user', '/about'] as path, index}
+        {#each ['/project1/', '/project1/catalog', '/project1/user', '/project1/about'] as path, index}
           <li class={classList[index]}>
             <Link class="link" to={path} on:click={() => click(index)}>
-              <span class="text">{path === '/' ? 'Home' : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}</span>
+              <span class="text">
+                {#if index === 0}Home{/if}
+                {#if index === 1}Catalog{/if}
+                {#if index === 2}User{/if}
+                {#if index === 3}About{/if}
+              </span>
               <span class="icon">
                 {#if index === 0}<HomeOutline />{/if}
                 {#if index === 1}<BookOutline />{/if}
@@ -38,10 +43,10 @@
       </ul>
     </nav>
     <div>
-      <Route path="/"><Home /></Route>
-      <Route path="/catalog"><Catalog /></Route>
-      <Route path="/user"><User /></Route>
-      <Route path="/about"><About /></Route>
+      <Route path="/project1/"><Home /></Route>
+      <Route path="/project1/catalog"><Catalog /></Route>
+      <Route path="/project1/user"><User /></Route>
+      <Route path="/project1/about"><About /></Route>
     </div>
   </Router>
 </main>
