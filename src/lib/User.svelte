@@ -26,6 +26,9 @@
     background-color: #f9f9f9;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
+  input {
+    background-color: #f9f9ff;
+  }
   input, button {
     width: 90%;
     padding: 10px;
@@ -34,11 +37,11 @@
     border: 1px solid #ddd;
   }
   button {
-    background-color: #008CBA;
+    background-color: #bbb6ac;
     color: white;
     cursor: pointer;
   }
   button:hover {
-    background-color: #005f5f;
+    background-color: #bbafaf;
   }
 </style>
